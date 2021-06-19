@@ -1,16 +1,19 @@
 const express=require('express');
-const cors=require('cors');
+const config=require('./config/config')
+// const cors=require('cors');
 const router=require('./routers/mainrouer')
-
+const path=require('path')
 const mongoose=require('mongoose')
 
 const app=express();
-app.use(cors());
+// app.use(cors());
+
+
+app.use(express.static(path.join(__dirname,'public')))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 const PORT=process.env.PORT || 8080;
-const mongodbUrl="mongodb+srv://abilashvm07:Biceps^17@cluster-1.stf1z.mongodb.net/Dare4Fun?retryWrites=true&w=majority"
-
+const mongodbUrl=config.MONGO_DB_URL;
 router(app,{});
 
 
@@ -23,6 +26,10 @@ mongoose.connect(mongodbUrl,{ useNewUrlParser: true, useUnifiedTopology:true })
         console.log('Error at mongodb :',err);
     });
 
+
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'pubic/index.html'));
+})
 
 app.listen(PORT,()=>{
     console.log(`Server Running At ${PORT}`);
