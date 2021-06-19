@@ -14,7 +14,6 @@ const addUser=(req,res)=>{
     let newUser=User(req.body);
     newUser.save()
         .then((user)=>{
-            console.log('saved to mongodb',user);
             res.send(user);
         })
 }

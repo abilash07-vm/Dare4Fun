@@ -24,7 +24,6 @@ const getAllDefaultQuestions=(req,res)=>{
         ]
          },(err,questions)=>{
         if(!err){
-            console.log(questions);
             res.send(questions);
         }
     });
