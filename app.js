@@ -1,18 +1,15 @@
 const express=require('express');
 const config=require('./config/config')
-const cors=require('cors');
 const router=require('./routers/mainrouer')
 const path=require('path')
 const mongoose=require('mongoose')
 
 const app=express();
-app.use(cors());
-
 
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-const PORT=process.env.PORT || 8080;
+const PORT=process.env.PORT || 3000;
 const mongodbUrl=config.MONGO_DB_URL;
 router(app,{});
 
