@@ -1,0 +1,8 @@
+<p *ngIf="isLoaded">Question : {{ index+1 }}/{{ getTotalNumberOfquestion() }}</p>
+<mv-question
+    *ngIf="isLoaded"
+    [replacename]="eventDetails['name']"
+    [question]="questions[index]"
+    [isEvent]=true
+    [correctIndex]=correctOption()
+    (selectedOption)=onSelect($event)></mv-question>

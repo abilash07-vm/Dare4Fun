@@ -1,0 +1,43 @@
+:host{
+    display: block;
+    background: url('https://images.unsplash.com/photo-1482053450283-3e0b78b09a70?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
+@keyframes dammal {
+    0%{
+        padding: 0 0;
+    }
+    100%{
+        padding: 110px 0;
+    }
+}
+form{
+    display: flex;
+    padding: 110px 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    animation-name: dammal;
+    animation-duration: 2.5s;
+}
+button,input{
+    padding: 5px;
+    width: 60%;
+    max-width: 300px;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 5px solid black;
+}
+button:not(.disabled):hover{
+    background: black;
+    color: silver;
+}
+
+.error{
+    color: red;
+}

@@ -1,0 +1,13 @@
+<div class="box" [ngClass]="{'eventbox':isEvent}">
+    <p class="question">{{ replace(question["question"]) }}</p>
+    <div class="options">
+        <div *ngFor="let option of question.options;let i=index">
+            <div>
+                <button *ngIf="question.optiontype==='Text'" [ngClass]="{ 'correctanswer': answeredIndex==i && !isEvent,'notcorrect': answeredIndex!=i && !isEvent , 'eventcorrect':isEvent && isTouched && correctIndex==i , 'eventwrong': isEvent && isTouched && correctIndex!=i }" (click)="onSelectAnswer(i)">{{ option.toString() | uppercase }}</button>
+                <img *ngIf="question.optiontype==='Image'" [ngClass]="{ 'correctanswer': answeredIndex==i && !isEvent, 'notcorrect': answeredIndex!=i && !isEvent,  'eventcorrect':isEvent && isTouched && correctIndex==i , 'eventwrong': isEvent && isTouched && correctIndex!=i }" src="{{ option }}" (click)="onSelectAnswer(i)">
+            </div>
+        </div>
+    </div>
+
+    <button *ngIf="!isEvent" class="clear" (click)="onClear()">Clear</button>
+</div>

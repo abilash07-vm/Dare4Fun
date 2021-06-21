@@ -1,0 +1,25 @@
+<div class="box">
+    <circle-progress *ngIf="currentUserScore" class="circle"
+                        [percent]="currentUserScore['score']"
+                        [maxPercent]="100"
+                        [radius]="50"
+                        [subtitle]="'Great!!!'"
+                        [subtitleFontSize]="'15'"
+                        [subtitleFontWeight]="'50'"
+                        [subtitleColor]="'#A9A9A9'"
+                        [titleColor]="'white'"
+                        [outerStrokeWidth]="2"
+                        [innerStrokeWidth]="1"
+                        [outerStrokeColor]="'#234AC9'"
+                        [innerStrokeColor]="'white'"
+                        [animationDuration]="1000"
+                        [showBackground]=true
+                        [backgroundColor]="'black'"
+                        [animation]="true"></circle-progress>
+    <p *ngIf="isCopied"><strong>Link Copied !!!</strong></p>
+    <button *ngIf="!currentUserScore" (click)="onCopy()">copy link</button>
+    <button style="margin: 10px 0;" *ngIf="currentUserScore" routerLink="" >Clich here to Create Your's</button>
+    <app-score [friends]="scoreDetails"></app-score>
+</div>
+
+<app-footer></app-footer>

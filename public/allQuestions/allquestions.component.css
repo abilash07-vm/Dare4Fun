@@ -1,0 +1,75 @@
+:host{
+    text-align: center;
+    display: block;
+    background-image: url('https://images.unsplash.com/photo-1549490316-686f9b5d359f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGxhaW4lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+    background-size: cover;
+    position: relative;
+    padding-top: 10px;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    overflow:visible;
+    bottom: 0;
+    right: 8;
+    color: white;
+    background-color: black;
+}
+
+h3,p{
+    margin: 0;
+    font-size: 20px;
+}
+nav button, nav p{
+    margin: 0 5%;
+}
+p{
+    padding-top: 10px;
+    font-size: 30px;
+}
+nav button{
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    margin-top: 6px;
+}
+button:not(.disabled):hover{
+    color: white;
+    background: black;
+}
+
+.wrapper{
+    position: relative;
+    font-size: 30px;
+    height: 50px;
+    width: 150px;
+}
+
+.content{
+    font-size: 15px;
+    position: absolute;
+    width: 200px;
+    color: black;
+    background-color: white;
+    bottom: 110%;   
+    display: none; 
+    
+}
+nav>p{
+    font-size: 20px;
+}
+.content>p{
+    font-size: 20px;
+}
+.custom:hover + .content{
+    display: block;
+}
+

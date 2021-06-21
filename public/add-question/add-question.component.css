@@ -1,0 +1,85 @@
+:host{
+    text-align: center;
+    display: block;
+    background-image: url('https://images.unsplash.com/photo-1545431781-3e1b506e9a37?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+    background-size: cover;
+    max-width: 100%;
+    font-size: 20px;
+}
+p{
+    margin: 0;
+}
+form{
+    margin: 0;
+    padding: 20px;
+    min-height: 60vh;
+    border: 3px solid black;
+}
+li{
+    list-style-type: none;
+    padding: 5px 0;
+}
+ul{
+    padding: 0;
+}
+input{
+    margin: 10px 0;
+    width: 200px;
+    text-align: center;
+}
+
+button{
+    font-size: 20px;
+}
+
+.error{
+    color: Red;
+}
+
+.big{
+    width: 95%;
+    height: 1em;
+    border: 5px solid Black;
+    padding: 10px;
+}
+
+
+.fixed{
+    margin-left: 10px;
+    margin-top:  10px;
+}
+
+img{
+    width: 90px;
+    height: 90px;
+    margin: 10px 20px;
+}
+.options{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.back{
+    margin: 20px;
+}
+.options div div{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 5px;
+}
+
+button:hover{
+    color: aliceblue;
+    background: black;
+}
+
+@media screen and (min-width:750px) {
+    img{
+        width: 150px;
+        height: 110px;
+    }
+}

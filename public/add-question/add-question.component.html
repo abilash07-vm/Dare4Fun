@@ -1,0 +1,31 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <p><strong>Note</strong></p>
+        <ul>
+            <li>%% should present in question inorder to replace your name</li>
+            <li>eg: what is %%'s favourite food?</li>
+        </ul>
+        <div>
+            <p *ngIf="errors!=''" class="error" >{{ errors }}</p>
+        </div>
+        <input type="text" class="big" placeholder="Question" formControlName="question">
+        <div>
+            <button type="button" (click)="toggle()">Option Type: {{ toggleState }}</button>
+            <button type="button" (click)="onAdd()" class="fixed">Add Option</button>
+        </div>
+        <div formArrayName="options" class="options">
+            <div *ngFor="let option of options.controls;let i=index">
+                <div formGroupName="{{ i }}">
+                    <input *ngIf="toggleState==='Text'" type="text" placeholder="option {{ i+1 }}" formControlName="text">
+                    <input *ngIf="toggleState==='Image' && links[i].length==0" type="file" accept="image/*" (change)="uploadImage($event,i)" formControlName="image" multiple>
+                    <img src="{{ links[i] }}" *ngIf="toggleState==='Image' && links[i].length>0">
+                    <img src="https://gifimage.net/wp-content/uploads/2017/07/gif-uploader-10.gif" *ngIf="toggleState==='Image' && uploadProgress[i]!=-1">
+                </div>
+            </div>
+        </div>
+            
+        <button class="back" type="button" (click)="onGoBack()">Go back</button>
+    
+        <button type="submit">Submit</button>
+    </form>
+</div>

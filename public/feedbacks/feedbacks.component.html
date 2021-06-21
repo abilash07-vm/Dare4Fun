@@ -1,0 +1,16 @@
+<form>
+    <div class="header">
+        <input #name type="test" name="name" placeholder="name" value="">
+        <input #feedback type="text" name="feedback" placeholder="feedback" value="">
+        <Button (click)="onSubmit(name.value,feedback.value)" type="submit">Submit</Button>
+    </div>
+
+    <div class="list">
+        <div *ngFor="let feedback of feedbacks" class="feedback">
+            <h3>{{ feedback["name"] }}</h3>
+            <p>{{ feedback["feedback"] }}</p>
+        </div>
+    </div>
+</form>
+
+<app-footer></app-footer>

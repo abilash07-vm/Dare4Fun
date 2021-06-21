@@ -1,0 +1,14 @@
+<section>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <div *ngIf="form.controls['username'].errors && (form.controls['username'].touched || form.controls['username'].dirty)" class="error">
+            Invalid name
+        </div>
+        <input type="text" placeholder="Enter your name" formControlName="username">
+        <div *ngIf="form.value['useremailid'].length>17 && form.controls['useremailid'].errors && (form.controls['useremailid'].touched || form.controls['useremailid'].dirty)" class="error">
+            Invalid email id
+        </div>
+        <input *ngIf="!isEvent" type="email" placeholder="Enter your email id" formControlName="useremailid">
+        <button [disabled]="(!form.valid && !isEvent) || (isEvent && !(form.value['username'].length>3))"  [ngClass]="{'disabled': !form.valid}">Create</button>
+    </form>
+</section>
+<app-footer></app-footer>
