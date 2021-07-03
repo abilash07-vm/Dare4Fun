@@ -1,0 +1,22 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+</style>
+<nav>
+    <p>{{ choosenQuestions.length }}/{{ allService.deno }}</p>
+    <div class="wrapper">
+        <div class="custom">
+            <button (click)="onAddQuestion()">Add Custom</button>
+        </div>
+        <div class="content">
+            <p>This Button is for Creating your own question. Create Your own and enjoy!!!</p>
+        </div>
+    </div>
+    <button [disabled]="isValid()" (click)="onSubmit()" [ngClass]="{'disabled': isValid()}">Submit</button>
+</nav>
+<h3>click correct option to choose</h3>
+<h3>Choose Atleast 10 questions to activate submit button</h3>
+<div>
+    <mv-question *ngFor="let question of allquestions"
+        [replacename]="this.currUser['username']"
+        [question]="question"></mv-question>
+</div>

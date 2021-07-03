@@ -1,0 +1,53 @@
+:host{
+    display: block;
+    background: lightgreen;
+    text-align: center;
+    max-width: 100%;
+}
+
+input,button{
+    margin: 5px;
+    text-align: center;
+    width: 400px;
+    font-size: 20px;
+}
+h3{
+font-size: 30px;
+}
+p{
+    font-size: 25px;
+}
+
+h3,p,h2{
+    margin: 0;
+    padding: 10px 0;
+}
+.list{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+form{
+    min-height: 400px;
+}
+
+.header{
+    margin: 0 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.list>div{
+    border: 3px solid yellow;
+    padding: 10px;
+    margin: 5px 10px;
+    background: url('https://images.unsplash.com/photo-1613408181923-f058a1b0e00c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZlZWRiYWNrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+    min-width: 100px
+}

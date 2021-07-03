@@ -1,0 +1,10 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Score</th>
+    </tr>
+    <tr *ngFor="let friend of friends">
+        <td>{{ friend['name'] }}</td>
+        <td>{{ friend['score'] }}</td>
+    </tr>
+</table>

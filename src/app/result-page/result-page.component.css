@@ -1,0 +1,26 @@
+:host{
+    display: block;
+    background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2589233.jpg&f=1&nofb=1');
+    background-size: cover;
+    font-size: 25px;
+}
+
+
+.box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    padding-top: 20px;
+    align-items: center;
+    border: 5px solid black;
+    min-height: 60vh;
+}
+button{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+p{
+    color: green;
+}

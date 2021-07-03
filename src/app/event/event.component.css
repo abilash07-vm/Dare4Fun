@@ -1,0 +1,15 @@
+:host{
+    text-align: center;
+    display: block;
+    background-image: url('https://images.unsplash.com/photo-1549490316-686f9b5d359f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGxhaW4lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    width: auto;
+}
